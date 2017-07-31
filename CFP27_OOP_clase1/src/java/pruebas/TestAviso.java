@@ -30,7 +30,15 @@ import entidades.Aviso;
  * </pre>
  */
 public class TestAviso {
-    
+
+    /** 
+     * <pre> 
+     *  main: Punto de entrada 
+     *        para testing unitrio manual
+     *        en este caso 
+     *        la salida en en texto plano en el output
+     * </pre>
+     */
     public static void main(String [] args){
         System.out.println("TEST Aviso: [..]  ");
         Aviso merlot = new Aviso();
