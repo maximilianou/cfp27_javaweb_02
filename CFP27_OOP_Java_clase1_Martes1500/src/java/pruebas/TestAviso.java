@@ -16,6 +16,8 @@ import entidades.Aviso;
  *  TODO: Agregacion
  *  TODO: Composicion
  *  TODO: HTTPServlet, web
+ *  TODO: JSON
+ *  TODO: Ajax
  *  TODO: Filtros 
  * </pre>
  * 
