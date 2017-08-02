@@ -27,5 +27,6 @@ public class Aviso {
     public  Integer stockObjeto; // Entero 32 bits
     long unidadesVendidas; // Entero 64 bits
     boolean tinto; // true o false
+    /** Categorias son acotads a una letra */
     char categoriaCalidad;
 }
