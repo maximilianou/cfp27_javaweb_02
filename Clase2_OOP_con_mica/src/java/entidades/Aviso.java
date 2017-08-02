@@ -23,6 +23,7 @@ public class Aviso {
      * </a>
      */
     public  int stock; // Entero 32 bits
+    /** TODO: Veremos Pasaje por valor o psje por Referencia */
     public  Integer stockObjeto; // Entero 32 bits
     long unidadesVendidas; // Entero 64 bits
     boolean tinto; // true o false
