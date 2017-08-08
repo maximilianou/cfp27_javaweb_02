@@ -23,7 +23,8 @@ public class TestProducto {
         cheese.nombre = "Arepa Jamon y Queso";
         cheese.precio = 70;
 
-        System.out.println("");
+        System.out.println(  peluda  );
+        System.out.println(  cheese  );
         
         
         System.out.println("Test Productos [OK]");
