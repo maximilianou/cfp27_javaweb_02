@@ -1,5 +1,4 @@
 package entidades;
-
 /**
  *
  * @author educacion
