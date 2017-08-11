@@ -12,5 +12,11 @@ package entidades;
 public class Bebida {
 
     public String nombre;
+
+    @Override
+    public String toString() {
+        return "" + nombre; //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }
