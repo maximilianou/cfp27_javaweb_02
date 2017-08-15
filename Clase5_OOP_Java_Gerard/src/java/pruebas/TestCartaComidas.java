@@ -25,6 +25,7 @@ public class TestCartaComidas {
       try{
         Carta cartaPastas = new Carta();
         cartaPastas.nombre = "La Carta de Pastas";
+        cartaPastas.cotaMaxima = 2;
         Plato tallarines = new Plato();
         tallarines.nombre = "TAllarines al Pesto";
         Plato ravioles = new Plato();
@@ -41,6 +42,7 @@ public class TestCartaComidas {
       try{
         Carta cartaCarnes = new Carta();
         cartaCarnes.nombre = "La Carta de Carnes";
+        cartaCarnes.cotaMaxima = 2;
         Plato asado = new Plato();
         asado.nombre = "Asado parrilla con Arbol Talado de Bosques de Bariloche";
         Plato bifeChori = new Plato();
