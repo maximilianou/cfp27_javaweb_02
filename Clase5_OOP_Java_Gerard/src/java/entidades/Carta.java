@@ -1,15 +1,25 @@
 package entidades;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author educacion
  */
 public class Carta {
-
     public String nombre;
-
-    public void agregar(Plato tallarines) {
-        throw new UnsupportedOperationException("Aun No Programado, aguantaaAaA!!."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    ArrayList<Plato> listaPlatos = new ArrayList();
+    public int cotaMaxima;
+    
+    public void agregar(Plato parametroPlato) throws Exception {
+        //throw new UnsupportedOperationException("Aun No Programado, aguantaaAaA!!."); 
+        if( listaPlatos.size() < cotaMaxima ){
+          listaPlatos.add(parametroPlato);
+        }else{
+            throw new Exception("Verifique Cantidad de Platos Menor a: "
+                    + cotaMaxima + " No Ha sido Agregado El Plato:" 
+                    + parametroPlato.nombre );
+        }
+    }
 }
