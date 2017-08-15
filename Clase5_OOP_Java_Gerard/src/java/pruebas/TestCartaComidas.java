@@ -12,17 +12,30 @@ public class TestCartaComidas {
     public static void main(String[] args) {
         System.out.println("pruebas.TestCartaComidas.main() [..]");
         
+        testDosPlatos();
+        testTresPlatos();
+        
+        System.out.println("pruebas.TestCartaComidas.main() [OK]");
+    }
+    public static void testDosPlatos(){
+      System.out.println("TestCartaComidas.testDosPlatos() [..]");
+      try{
         Carta cartaPastas = new Carta();
         cartaPastas.nombre = "La Carta de Pastas";
-        
         Plato tallarines = new Plato();
         tallarines.nombre = "TAllarines al Pesto";
-        
         Plato ravioles = new Plato();
         ravioles.nombre = "Ravioles con Jamon y Queso";
         cartaPastas.agregar( tallarines );
         cartaPastas.agregar( ravioles );
-        
+      }catch(Exception ex){
+          System.out.println("Error, Verifique la cantidad de platos."+ ex.getMessage());
+      }
+      System.out.println("TestCartaComidas.testDosPlatos() [OK]");
+    }
+    public static void testTresPlatos(){
+      System.out.println("TestCartaComidas.testTresPlatos() [..]");
+      try{
         Carta cartaCarnes = new Carta();
         cartaCarnes.nombre = "La Carta de Carnes";
         Plato asado = new Plato();
@@ -34,13 +47,10 @@ public class TestCartaComidas {
         cartaCarnes.agregar( asado );
         cartaCarnes.agregar( bifeChori );
         cartaCarnes.agregar( bondiola );
-        
-        System.out.println("pruebas.TestCartaComidas.main() [OK]");
-    }
-    public static void testDosPlatos(){
-        
-    }
-    public static void testTresPlatos(){
+      }catch(Exception ex){
+          System.out.println("Error, Verifique la cantidad de platos."+ ex.getMessage());
+      }
+      System.out.println("TestCartaComidas.testTresPlatos() [OK]");
         
     }
     
