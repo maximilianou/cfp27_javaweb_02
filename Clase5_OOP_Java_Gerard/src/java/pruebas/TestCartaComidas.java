@@ -1,5 +1,8 @@
 package pruebas;
 
+import entidades.Carta;
+import entidades.Plato;
+
 /**<pre>
  * Exceptions
  * TDD:  https://en.wikipedia.org/wiki/Test-driven_development
