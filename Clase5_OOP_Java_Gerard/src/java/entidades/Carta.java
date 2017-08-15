@@ -1,14 +1,14 @@
-package pruebas;
+package entidades;
 
 /**
  *
  * @author educacion
  */
-class Carta {
+public class Carta {
 
-    String nombre;
+    public String nombre;
 
-    void agregar(Plato tallarines) {
+    public void agregar(Plato tallarines) {
         throw new UnsupportedOperationException("Aun No Programado, aguantaaAaA!!."); //To change body of generated methods, choose Tools | Templates.
     }
     
