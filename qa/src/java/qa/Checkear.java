@@ -27,13 +27,13 @@ public class Checkear {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.linkedin.com/");
-        Thread.sleep(3000);  // Let the user actually see something!
+        Thread.sleep(2000);  // Let the user actually see something!
         WebElement searchBox = driver.findElement(By.cssSelector(".same-name-search input[name='first']"));
         searchBox.sendKeys("Maximiliano");
         searchBox = driver.findElement(By.cssSelector(".same-name-search input[name='last']"));
         searchBox.sendKeys("Usich");
         searchBox.submit();
-        Thread.sleep(3000);  // Let the user actually see something!
+        Thread.sleep(2000);  // Let the user actually see something!
 
         driver.quit();
     }
