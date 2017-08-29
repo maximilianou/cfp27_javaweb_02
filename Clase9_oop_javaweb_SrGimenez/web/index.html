@@ -4,31 +4,34 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo.css" rel="stylesheet" />
     </head>
     <body>
         <header>
             Formulario de Inscripcion
         </header>
         Nombre y Apellido:
-        
-        <input name="nombre_apellido" value="" type="text" />
-        <br>        <br>
-        Nick:
-        <input name="nick" value="" type="text" />
-        <br>        <br>
-        E-mail:
-        <input name="email" value="" type="text" />
-        <br>        <br>
-        Contraseña:
-        <input name="clave_1" value="" type="password" />
-        <br>        <br>
-        Repetir Contraseña:
-        <input name="clave_2" value="" type="password" />
-        <br>        <br>
-        <input value="Registrar" name="registrar" 
-               type="button" onclick="PET.altaUsuario();" />
-        <input value="Restablecer" name="restablecer" type="reset" />
-        
+        <form method="GET" action="" id="form_registro_usuario" >  
+            <input name="nombre_apellido" value="" type="text" />
+            <br>        <br>
+            Nick:
+            <input name="nick" value="" type="text" />
+            <br>        <br>
+            E-mail:
+            <input name="email" value="" type="text" />
+            <br>        <br>
+            Contraseña:
+            <input name="clave_1" value="" type="password" />
+            <br>        <br>
+            Repetir Contraseña:
+            <input name="clave_2" value="" type="password" />
+            <br>        <br>
+            <input value="Registrar" name="registrar" 
+                   type="button" onclick="PET.altaUsuario();" />
+            <input value="Restablecer" name="restablecer" type="reset" />
+        </form>
+        <div id="panelOK"></div>
+        <div id="panelERROR"></div>
         <script src="js/registroUsuario.js"  ></script>
     </body>
 </html>
