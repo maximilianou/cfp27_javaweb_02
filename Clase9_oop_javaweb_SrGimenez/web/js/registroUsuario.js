@@ -15,8 +15,21 @@ PET.altaUsuario = function(){
         losInput[indice].valor  = losInput[indice].value;
     }
     
-    
-    panelOK.innerHTML = JSON.stringify( losInput );
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST','./RegistrarUsuario');
+    xhr.onreadystatechange = function(){
+        if( xhr.readyState === 4 ){
+            if( xhr.status === 200 ){
+                panelOK.innerHTML = xhr.responseText;
+            }else {
+                panelERROR.innerHTML = "error::: " 
+                        + xhr.status + "::" 
+                        + xhr.statusText ;
+            }
+        }
+    };
+    xhr.send( JSON.stringify( losInput ) );
+    //panelOK.innerHTML = JSON.stringify( losInput );
     
     //panelERROR.innerHTML = JSON.stringify( losInput );
 };
