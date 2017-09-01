@@ -6,6 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>Consolas de VideoJuegos</div>
+        <div>
+            Consolas de VideoJuegos.
+        </div>
+        <form action="" method="GET" >
+            <h2>Formuladio de Pedido.</h2>
+            <input type="text"   name="email"      placeholder="pone@gmail" />
+            <input type="text"   name="nombre"            />
+            <input type="text"   name="pedido"            />
+            <input type="submit" value="Haga el pedido!! Submit!! NO utilizar mas Submit, utilizar Ajax por favor." />
+            <input type="reset"  value="Limpiar Pedido!" />
+            <input type="button" 
+                   value="Haga el pedido!! Por Ajax!! con metodo POST" 
+                   onclick="JUEGO.hacerPedido();"
+                   />
+        </form>
+        <script src="js/videitos.js" ></script>
     </body>
 </html>
