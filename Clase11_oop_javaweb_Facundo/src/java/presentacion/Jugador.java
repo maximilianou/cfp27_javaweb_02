@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -31,24 +33,28 @@ public class Jugador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Connection conexion = null;
         try {
             // Siempre voy a Devolver una lista de Jugadores, asi este vacia.
             ArrayList<TreeMap> listaJugadores = new ArrayList();
             // Cargar al DriverManager la libreria de Mysql
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             // Conectar a la Base de Datos 
-            Connection conexion = DriverManager.getConnection(
+            conexion = DriverManager.getConnection(
                     "jdbc:mysql://localhost/dbrest",
                     "educacion",
                     "educacion");
             // Ejecutar la Sentencia, Select * from personas
+            PreparedStatement sentencia = conexion.prepareStatement(
+                    " SELECT * FROM personas ");
             // Obteer los resultados, si los hay.
-            { // Contexto de Creacion de Instancias de Jugadores
+            ResultSet resultado = sentencia.executeQuery();
+            while( resultado.next() ){ // Contexto de Creacion de Instancias de Jugadores
                 // Voy a instanciar, tantos jugadore como hay en la DB
                 TreeMap<String, String> unJugador = new TreeMap();
-                unJugador.put("nombre", "Marilu");
-                unJugador.put("posicion", "Delantero");
-                unJugador.put("energia", "50%");
+                unJugador.put("nombre",   resultado.getString("per_nombre"));
+                unJugador.put("posicion", resultado.getString("per_id"));
+                unJugador.put("energia",  resultado.getString("per_email"));
                 // Voy a Agregar, Cada jugador Instanciado a la listar resultado
                 listaJugadores.add(unJugador);
             }
@@ -62,6 +68,12 @@ public class Jugador extends HttpServlet {
             response.getWriter().println(convertir.toJson( "ERROR: " + ex.getMessage() ) );
         } catch (IllegalAccessException ex) {
             response.getWriter().println(convertir.toJson( "ERROR: " + ex.getMessage() ) );
+        }finally{
+            try {
+                conexion.close();
+            } catch (SQLException ex) {
+                response.getWriter().println(convertir.toJson( "ERROR: " + ex.getMessage() ) );
+            }
         }
     }
 
