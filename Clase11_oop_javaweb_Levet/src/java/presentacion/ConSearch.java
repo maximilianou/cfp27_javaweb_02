@@ -16,6 +16,24 @@ public class ConSearch extends HttpServlet {
             throws ServletException, IOException {
 
         ArrayList<TreeMap> listaResultado = new ArrayList();
+
+        // Cargar el Driver de Base de DAtos 
+        //      java.sql.DriverManager.getConnection()
+        // Conectarme a la Base de Datos     
+        //      java.sql.Connection
+        // Pedir a la Conexion establecida una Sentencia
+        //      java.sql.PreparedStatement
+        // A la Sentencia, con SQL, ejecutar
+        //      sentencia.executeQuery()
+        // recibir el Resultado en el objeto ResultSet
+        //      java.sql.ResultSet
+        // Para Cada Fila de la base de Datos 
+        //      while()
+        //  instanciar un objeto 
+        //      java.util.TreeMap
+        //  sumarlo a la lista resultado
+        //      java.util.ArrayList
+        // retornar el resultado a la pagina web en JSON
         
         TreeMap<String, String> unConcertista = new TreeMap();
         unConcertista.put("nombre","Luka");
@@ -27,6 +45,7 @@ public class ConSearch extends HttpServlet {
         
         listaResultado.add(unConcertista);
         listaResultado.add(otroConcertista);
+
         
         response.getWriter().println( 
                 convertir.toJson( listaResultado )
