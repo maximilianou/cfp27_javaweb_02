@@ -39,13 +39,14 @@ public class Partida extends HttpServlet {
             conectar = DriverManager.getConnection(
                     "jdbc:mysql://localhost/dbrest", "educacion", "educacion");
             PreparedStatement sentencia = conectar.prepareStatement(
-                    " SELECT * FROM personas ");
+                    " SELECT * FROM personas " );
             ResultSet resultado = sentencia.executeQuery();
             while ( resultado.next() ) {
                 // Instanciar el Objeto Actual,
                 // Alimentandolo con lo que viene de la bse de datos
                 HashMap objetoActual = new HashMap();
-                objetoActual.put("jugada", resultado.getString("per_id"));
+                objetoActual.put("jugada", 
+                        resultado.getString("per_id"));
                 objetoActual.put("jugador", resultado.getString("per_nombre"));
                 // Agregamos el Objecto Actual a la Lista resultado
                 listado.add(objetoActual);

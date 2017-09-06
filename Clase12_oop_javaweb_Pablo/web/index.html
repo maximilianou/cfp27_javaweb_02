@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo.css" rel="stylesheet" />
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="panelControl"   class="panel" >
+            <form action="" method="GET" id="formPartida">
+                <label for="nickname">nickname</label>
+                <input type="text" id="nickname" /><br/>
+                <label for="contacto">contacto</label>
+                <input type="text" id="contacto" /><br/>
+                <input type="button" value="Enviar con Ajax"
+                       onclick="Partida.jugar('#formPartida input')"/>
+            </form>
+        </div>
+        <div id="panelResultado" class="panel" >
+
+        </div>
+        <div id="panelOK"        class="panel">
+
+        </div>
+        <div id="panelERROR"     class="panel">
+
+        </div>
+        <script src="js/patida.js" ></script>
     </body>
 </html>
