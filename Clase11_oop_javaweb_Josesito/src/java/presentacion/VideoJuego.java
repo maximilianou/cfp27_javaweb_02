@@ -4,11 +4,11 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.TreeMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -39,14 +39,17 @@ public class VideoJuego extends HttpServlet {
             conectar = DriverManager.getConnection(
                     "jdbc:mysql://localhost/dbrest",
                     "educacion", "educacion");
-            
-            TreeMap<String, String> unJuego = new TreeMap();
+            PreparedStatement sentencia = conectar.prepareStatement(
+                    " SELECT * FROM personas ");
+            ResultSet resultado = sentencia.executeQuery();
+            while ( resultado.next() ) {
+                TreeMap<String, String> unJuego = new TreeMap();
+                unJuego.put("nombre", resultado.getString("per_nombre") );
+                unJuego.put("Categoria", resultado.getString("per_id"));
+                unJuego.put("precio", resultado.getString("per_email"));
+                listadoResultado.add(unJuego);
 
-            unJuego.put("nombre", "RPG 400");
-            unJuego.put("Categoria", "RPG");
-            unJuego.put("precio", "5000");
-            listadoResultado.add(unJuego);
-            
+            }
             response.getWriter().println(
                     convertir.toJson(listadoResultado)
             );
