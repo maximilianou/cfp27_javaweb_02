@@ -4,8 +4,20 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo.css" rel="stylesheet" />
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="panelControl" class="panel">
+            <input type="button" 
+                   value="Consultar FideoJuegos"
+                   onclick="JUEGOS.consultar()"/>
+        </div>
+        <div id="panelResultado" class="panel">
+        </div>
+        <div id="panelOK" class="panel">
+        </div>
+        <div id="panelError" class="panel">
+        </div>
+        <script src="js/fideojuego.js" ></script>
     </body>
 </html>
