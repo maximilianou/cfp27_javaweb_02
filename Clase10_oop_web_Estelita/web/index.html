@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilopizza.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <h2>Maestros Pizzeros!!</h2>
+            <form action="http://www.google.com/" method="GET">
+                
+                <label for="mesa_id">Mesa:</label>
+                <input type="text" name="mesa" id="mesa_id"/>
+                <label for="mozo_id">Mozzo:</label>
+                <input type="text" name="mozo" id="mozo_id"/>
+                <label for="pizza_id">Pizza:</label>
+                <input type="text" name="pizza" id="pizza_id"/>
+                <!-- input type="submit" 
+                       value="Envia version 1990. No usar mas." 
+                       /-->
+                <input type="reset" value="Vacia los campos" 
+                       />
+                <input type="button" 
+                       onclick="PIZZA.pedido()"
+                       value="Envia con Ajax!! Este Usamos hoy 2017"
+                       />
+            </form>
+        </div>
+        <div id="panelOK"></div>
+        <div id="panelERROR"></div>
+        <script src="js/lapizza.js" ></script>
+        
+    </body>
+</html>
