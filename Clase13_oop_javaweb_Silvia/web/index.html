@@ -4,8 +4,56 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+Como hacemos con la versiones nuevas y viejas
+Programamos con las versiones nuevas y sus facilidades
+Y luego compatibiliza automaticamente con herramentas como 
+Javascript: https://babeljs.io/
+HTML5:      https://en.wikipedia.org/wiki/HTML5_Shiv
+------------
+Vanilla Javascript
+Pure CSS
+
+------------
+Librerias:
+  json.js
+  html5shiv.js
+  
+------------
+Frameworks: ( para trabajar, y ganar una entrevista, es fundamental )
+  JQuery 
+  BackBoneJS 
+  KnockOutJS 
+  Ember 1, 3, 4, 5 
+  Bootstrap 
+  Angular (un monton de librerias) 
+  Angular2 (un monton de librerias) 
+
+-->        
+    <link href="css/estilo.css" rel="stylesheet" />
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="panelControl"   class="panel" >
+            <form action="" method="GET" id="formViajes">
+                <label for="desde">Desde</label>
+                <input type="text" id="desde" /><br/>
+                <label for="hasta">Hasta</label>
+                <input type="text" id="hasta" /><br/>
+                <label for="fecha">Fecha</label>
+                <input type="text" id="fecha" /><br/>
+                
+                <input type="button" value="Enviar con Ajax"
+                       onclick=""/>
+                <input type="button" value="Consultar con Ajax"
+                       onclick="Viajes.consultar()"/>
+            </form>
+        </div>
+        <div id="panelResultado" class="panel" >
+        </div>
+        <div id="panelOK"        class="panel">
+        </div>
+        <div id="panelERROR"     class="panel">
+        </div>
+        <script  src="js/viajes.js" ></script> 
     </body>
 </html>
