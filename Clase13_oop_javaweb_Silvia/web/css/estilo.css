@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.panel{
+    width: 50%;
+    height: 100px;
+    float: left;
+    overflow: auto;
+}
+#panelControl{
+    background-color: crimson;
+}
+#panelOK{
+    background-color: yellowgreen;
+}
+#panelERROR{
+    background-color: tomato;
+}
+#panelResultado{
+    background-color: aqua;
+}
