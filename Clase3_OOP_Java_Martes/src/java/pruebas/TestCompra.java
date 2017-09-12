@@ -14,7 +14,7 @@ public class TestCompra {
 
         Compra pedidoArepas = new Compra();
         pedidoArepas.elCliente = new Cliente();
-        pedidoArepas.elCliente.nombre = "Alberto";
+        pedidoArepas.elCliente.nombre = "Julia Maria";
         pedidoArepas.elVendedor = new Vendedor();
         pedidoArepas.elVendedor.nombre = "Michael Angelo";
         Producto laPe = new Producto();
@@ -42,8 +42,14 @@ public class TestCompra {
         fuga.nombre = "Fugazzeta Rellena con Jamon y Queso y Morrones, y Palmeitos";
         pedidoPizza.agregar(fuga);
         pedidoPizza.agregar(muza);
+        elClientito.nombre = "Julia Marieta" ;
         System.out.println(pedidoPizza);
 
+        Compra cc = new Compra();
+        cc.elCliente = elClientito;
+        System.out.println(cc);
+        
+        
         System.out.println("pruebas.TestCompra.main() [OK]");
     }
 }

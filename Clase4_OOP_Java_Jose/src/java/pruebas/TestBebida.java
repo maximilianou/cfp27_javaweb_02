@@ -38,9 +38,9 @@ public class TestBebida {
 
         System.out.println( listaBebidas );
         
-        for( int indice = 0; indice < listaBebidas.size(); indice++ ){
-            System.out.print( " :"+ indice + "::" + listaBebidas.get(indice) );
-        }
+//        for( int indice = 0; indice < listaBebidas.size(); indice++ ){
+//            System.out.print( " :"+ indice + "::" + listaBebidas.get(indice) );
+//        }
         System.out.println("");
         
         Iterator recorrer = listaBebidas.iterator();
