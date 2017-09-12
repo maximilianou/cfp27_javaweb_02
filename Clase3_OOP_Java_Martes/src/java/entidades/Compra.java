@@ -17,7 +17,6 @@ public class Compra {
         listaProductos.add(unProducto);
     }
     
-    
     public String toString() {
         Gson convertir = new Gson();
         return convertir.toJson(this);

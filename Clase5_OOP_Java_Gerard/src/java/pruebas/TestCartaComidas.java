@@ -16,6 +16,7 @@ public class TestCartaComidas {
         System.out.println("pruebas.TestCartaComidas.main() [..]");
         
         testDosPlatos();
+        
         testTresPlatos();
         
         System.out.println("pruebas.TestCartaComidas.main() [OK]");

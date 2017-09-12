@@ -2,7 +2,7 @@ package entidades;
 
 import com.google.gson.Gson;
 import java.util.ArrayList;
-
+//import java.lang.Object;
 /**
  * <pre>
  * Aplicando el ejercicio de Compra
@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * </pre>
  * @author educacion
  */
-public class Compra {
+public class Compra { // extends Object {
     ArrayList<Producto> listaProductos = new ArrayList();
     Cliente elCliente;
     Vendedor elVendedor;
@@ -24,10 +24,11 @@ public class Compra {
     public void agregar(Producto actualProducto){
         listaProductos.add(actualProducto);
     }
-        @Override
+/*    
+    @Override
     public String toString() {
         Gson convertir = new Gson();
         return convertir.toJson( this );
     }
-
+*/
 }

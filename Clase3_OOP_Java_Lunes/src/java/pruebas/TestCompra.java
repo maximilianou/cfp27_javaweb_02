@@ -13,12 +13,14 @@ import entidades.Producto;
  * @author educacion
  */
 public class TestCompra {
+    
+    
     public static void main(String[] args) {
         System.out.println("Test Compra [..]");
         
         Compra laCompra = new Compra();
         
-        Producto laCorbata = new Producto();
+       Producto laCorbata = new Producto();
         laCorbata.nombre = "Corbata Rojo Punzo";
         laCorbata.precio = 500;
         
@@ -34,7 +36,9 @@ public class TestCompra {
         laCompra.agregar( elPantalon );
         laCompra.agregar( laCamisa );
         
+        
         System.out.println( laCompra  );
         System.out.println("Test Compra [OK]");
     }
+    
 }
